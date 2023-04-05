@@ -1,0 +1,25 @@
+<body>
+
+  
+<h1>Today is...</h1>
+
+<h3 id="person">person<h3>
+  
+
+  
+  <script>
+    
+    var pps = ["Nandan", "Chu", "Harrison", "Marius"];
+
+const elem = document.getElementById("person");
+
+var now = new Date();
+var fullDaysSinceEpoch = Math.floor(now / 8.64e7);
+
+const test = document.getElementById("test");
+const n = (2 + fullDaysSinceEpoch) % pps.length;
+
+elem.textContent = pps[n];
+
+  </script>
+  </body>
