@@ -1,25 +1,30 @@
-<body>
-
+<body style="background-color:grey;color: white">
   
-<h1>Today is...</h1>
+  <div style="position: absolute;       top: 50%;       left: 50%;       margin-right: -50%;       transform: translate(-50%, -50%);border: black solid 5px; padding: 50px">
+    <h1>Today is: <span id="date">Hi</span></h1>
 
-<h3 id="person">person<h3>
+<h3 id="person" style="font-family:'Apple-Chancery'; font-size: 30px">person<h3>
   
-
+  </div>
   
   <script>
     
-    var pps = ["Nandan", "Chu", "Harrison", "Marius"];
+    var pps = ["Sai", "Nandan", "Chu","Harrison", "Marius"];
 
 const elem = document.getElementById("person");
 
 var now = new Date();
 var fullDaysSinceEpoch = Math.floor(now / 8.64e7);
-
-const test = document.getElementById("test");
+    
 const n = (2 + fullDaysSinceEpoch) % pps.length;
 
 elem.textContent = pps[n];
+    
+      var now = new Date();
+  var datetime = now.toLocaleString().split(",")[0]
+
+  // Insert date and time into HTML
+  document.getElementById("date").innerHTML = datetime;
 
   </script>
   </body>
